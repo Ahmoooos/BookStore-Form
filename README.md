@@ -10,6 +10,7 @@ Welcome to the **Bookstore Reservation Form**! This web application allows users
 - Uses **JavaScript (Vanilla), HTML, and CSS**
 
 ## 🖥️ Preview
-![Bookstore Form Screenshot](./Resources/bookstore_screenshot.png)
+![Bookstore Form Screenshot](./Resources/Screenshot.png)
+
 
 ## 📂 Project Structure
