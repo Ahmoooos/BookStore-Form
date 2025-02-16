@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main paragraph">
+            <h1><i class="fas fa-book"></i> Welcome to Our Bookstore</h1>
+            <div class="form-container">
+                <form id="reservationForm">
+                    <label for="bookCount">How Many books?</label>
+                    <input type="text" id="bookCount" name="bookCount" placeholder="Enter number of books">
+                    <button type="button" id="submitBookCount">Next</button>
+                    <span id="errorMessage" class="error-message"></span>
+                </form>
+            </div>
+            <div id="bookDetailsContainer" class="form-container" style="display: none;">
+                <!-- Dynamic book details form will be inserted here -->
+            </div>
+            <div id="booksTableContainer" style="display: none;">
+                <h2>Book Reservations</h2>
+                <table id="booksTable">
+                    <thead>
+                        <tr>
+                            <th>Book Name</th>
+                            <th>Price</th>
+                            <th>Author Name</th>
+                            <th>Author Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Book rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+#reservationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('./Resources/cartoon-library-interior-with-bookshelf-background-vector-46602074.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ef9105;
+    /* Warm orange color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between text and icon */
+}
+
+i {
+    color: #ff9800;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+h1 i {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    color: #ff9800;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff9800;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #ff5722;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #ff9800;
+    }
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: #ff9800;
+    animation: glow 2s infinite alternate;
+}
+
+h1 i {
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 i:hover {
+    transform: rotate(15deg);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: #ff9800;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 2px solid #ff9800; /* Cursor effect */
+    animation: typing 2s steps(20, end) forwards, blinkCursor 0.7s steps(2, start) infinite;
+}
+
+/* Remove cursor after animation */
+h1.done {
+    border-right: none;
+}
+.form-container {
+    margin-left: 126px;
+    margin-top: 222px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 344px;
+    justify-content: center;
+}
+
+.form-container label {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 30px
+}
+
+button {
+    padding: 7px 12px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 19%;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.error-message {
+    font-weight: bold;
+    color: #ff0000;
+    font-size: 1.15rem;
+    display: none;
+    margin-top: 5px;
+    text-shadow: #e53935 .7;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* *******************************************************/
+/* Previous styles remain the same */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #ff9800;
+    color: white;
+}
+
+tr {
+    background-color: #f9f9f9;
+}
+
+
+
+button.edit,
+button.delete {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+button.edit:hover {
+    background-color: #45a049;
+}
+
+button.delete:hover {
+    background-color: #e53935;
+}
+
+input {
+    padding: 8px;
+    /* Smaller padding */
+    font-size: 0.9rem;
+    /* Smaller font size */
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    width: 90%;
+    /* Slightly smaller width */
+    text-align: center;
+    margin-bottom: 10px;
+    /* Reduced margin */
+}
+
+button {
+    padding: 8px 16px;
+    /* Smaller padding */
+    font-size: 0.9rem;
+    /* Smaller font size */
+    color: #fff;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* Slightly smaller width */
+    margin-top: 10px;
+    /* Added margin */
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.75rem;
+    /* Smaller font size */
+    display: none;
+    margin-top: 5px;
+    /* Reduced margin */
+}
+
+.error-message.show {
+    display: block;
+}
+
+/*****************************************
+/* Previous styles remain the same */
+
+/* .form-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    /* Reduced space below labels */
+}
+
+input {
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 5px;
+    /* Reduced space below inputs */
+}
+
+button {
+    padding: 2px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 1.05rem;
+    display: none;
+    margin-top: 5px;
+    text-shadow: #e53935 .7;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Style for the book counter */
+h2 {
+    font-size: 1.5rem;
+    color: #ff9800;
+    /* Matches the warm orange color */
+    margin-bottom: 10px;
+}
